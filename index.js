@@ -20,7 +20,7 @@ const server = http.createServer((req,res) => {
         });
     }else{
         fs.readFile('./pages/404.html', (err, data) => {
-            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.writeHead(404, {'Content-Type': 'text/html'});
             res.end(data);
         });
     }
